@@ -1,1 +1,1 @@
-find . -maxdepth 1 -name "*.png" | sort -V | xargs img2pdf -o output.pdf
+find . -maxdepth 1 -name "*.png" | sort -V | xargs img2pdf -o buch.pdf
