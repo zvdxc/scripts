@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for file in *.png; do
+    # Extract the number from the filename
+    number=$(basename "$file" .png)
+    # Use printf to format the number with leading zeros
+    new_name=$(printf "%03d.png" "$number")
+    # Rename the file if the new name is different
+    if [ "$file" != "$new_name" ]; then
+        mv "$file" "$new_name"
+    fi
+done
